@@ -58,9 +58,13 @@ UBUNTU_OS_RELEASE="ubuntu"
 DEBIAN_OS_RELEASE="debian"
 
 # 配置、日志文件存放目录
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 FILE_SAVE_DIR=""
 # 目录前缀
 FILE_DIR_PREFIX="aliyun-ddns"
+## 强行定义路径
+FILE_SAVE_DIR="${SCRIPTPATH}/${FILE_DIR_PREFIX}"
+
 #配置文件路径
 CONFIG_FILE_PATH=""
 # 配置文件名
